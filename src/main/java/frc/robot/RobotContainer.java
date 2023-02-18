@@ -4,29 +4,20 @@
 
 package frc.robot;
 
-import edu.wpi.first.wpilibj2.command.Command;
-import edu.wpi.first.wpilibj2.command.PrintCommand;
-import frc.robot.commands.AutoAligner;
-import frc.robot.commands.DefaultDriveCommand;
-import frc.robot.subsystems.*;
-import frc.team5431.titan.core.joysticks.CommandXboxController;
+import static edu.wpi.first.wpilibj2.command.Commands.run;
+import static edu.wpi.first.wpilibj2.command.Commands.runOnce;
 
-import static edu.wpi.first.wpilibj2.command.Commands.*;
-
-import java.util.HashMap;
 import java.util.List;
 
 import com.ctre.phoenix.motorcontrol.can.WPI_TalonFX;
-import com.pathplanner.lib.PathConstraints;
-import com.pathplanner.lib.PathPlanner;
-import com.pathplanner.lib.PathPlannerTrajectory;
-import com.pathplanner.lib.auto.PIDConstants;
-import com.pathplanner.lib.auto.SwerveAutoBuilder;
 
 import edu.wpi.first.math.Pair;
 import edu.wpi.first.math.kinematics.ChassisSpeeds;
-import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj2.command.Command;
+import frc.robot.commands.DefaultDriveCommand;
+import frc.robot.subsystems.Drivebase;
+import frc.team5431.titan.core.joysticks.CommandXboxController;
 
 public class RobotContainer {
     private final Systems systems = new Systems();
